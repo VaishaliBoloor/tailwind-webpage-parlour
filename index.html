@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Nail Salon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function showMainPage() {
+      document.getElementById('splash-screen').classList.add('hidden');
+      document.getElementById('main-page').classList.remove('hidden');
+    }
+  </script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Splash Screen -->
+  <div id="splash-screen" class="h-screen flex items-center justify-center bg-gradient-to-r from-purple-600 to-blue-500 text-white">
+    <div class="text-center px-4">
+      <h1 class="text-5xl sm:text-6xl font-extrabold mb-6">Welcome to My Nail Salon</h1>
+      <p class="text-lg sm:text-xl mb-8">Your destination for beauty and relaxation</p>
+      <button onclick="showMainPage()" class="bg-yellow-400 text-black py-3 px-6 rounded-lg hover:bg-yellow-500 transition duration-300">
+        Click to Enter
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Page -->
+  <div id="main-page" class="hidden">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold text-purple-600">My Nail Salon</a>
+        <button class="block lg:hidden text-gray-700 focus:outline-none" id="menu-button">
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <ul class="hidden lg:flex space-x-6 text-gray-700 font-medium" id="menu">
+          <li><a href="#home" class="hover:text-purple-600">Home</a></li>
+          <li><a href="#services" class="hover:text-purple-600">Services</a></li>
+          <li><a href="#about" class="hover:text-purple-600">About</a></li>
+          <li><a href="#contact" class="hover:text-purple-600">Contact</a></li>
+          <li><a href="#book-now" class="bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition">Book Now</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-purple-600 to-blue-500 text-white py-20 px-4">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Get 20% Off Your First Visit!</h2>
+        <p class="text-lg md:text-xl mb-8">Indulge in a relaxing manicure or pedicure at My Nail Salon</p>
+        <a href="#services" class="bg-yellow-400 text-black py-3 px-6 rounded-lg hover:bg-yellow-500 transition duration-300">Explore Services</a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-4 bg-gray-200">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-12">Our Special Services</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+          <!-- Service 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <h3 class="text-xl font-semibold text-blue-600 mb-4">Manicure</h3>
+            <p class="text-gray-700 mb-4">Pamper your hands with a relaxing manicure. Includes nail trimming, shaping, and a beautiful polish of your choice.</p>
+            <a href="#book-now" class="text-blue-600 hover:underline">Book Now</a>
+          </div>
+          <!-- Service 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <h3 class="text-xl font-semibold text-blue-600 mb-4">Pedicure</h3>
+            <p class="text-gray-700 mb-4">Give your feet the attention they deserve with a luxurious pedicure. Includes foot soak, scrub, and nail care.</p>
+            <a href="#book-now" class="text-blue-600 hover:underline">Book Now</a>
+          </div>
+          <!-- Service 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <h3 class="text-xl font-semibold text-blue-600 mb-4">Nail Art</h3>
+            <p class="text-gray-700 mb-4">Express yourself with unique and creative nail art designs. From simple accents to elaborate artwork, we’ve got you covered.</p>
+            <a href="#book-now" class="text-blue-600 hover:underline">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-gray-100">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">About Us</h2>
+        <p class="text-gray-700 mb-8">My Nail Salon is dedicated to providing exceptional nail care and beauty services. Our professional team is here to pamper you in a relaxing environment.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 bg-gray-200">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
+        <p class="text-gray-700 mb-4">123 Beauty Lane, Glamour City</p>
+        <p class="text-gray-700 mb-4">Phone: (123) 456-7890</p>
+        <p class="text-gray-700">Email: info@mynailsalon.com</p>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="container mx-auto text-center">
+        <p class="text-sm">&copy; 2025 My Nail Salon. All Rights Reserved.</p>
+        <div class="mt-4">
+          <a href="#" class="text-blue-400 hover:text-blue-300">Privacy Policy</a> | 
+          <a href="#" class="text-blue-400 hover:text-blue-300">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
